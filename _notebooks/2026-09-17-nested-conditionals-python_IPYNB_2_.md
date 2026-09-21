@@ -105,7 +105,27 @@ The same nested structure appears in three forms:
 
 Predict the output before running the code.
 
+{% capture challenge0 %}
+Popcorn Hack 1 - Trace the nested conditional and test all three outcomes
+{% endcapture %}
+
+{% capture code0 %}
+is_weekday = True
+homework_finished = False
+
+if is_weekday:
+    if homework_finished:
+        print("Free time")
+    else:
+        print("Finish homework")
+else:
+    print("Weekend plan")
+{% endcapture %}
+
+{% capture source0 %}
 ```python
+# CODE_RUNNER: Popcorn Hack 1 - Trace the nested conditional and test all three outcomes
+
 is_weekday = True
 homework_finished = False
 
@@ -117,6 +137,15 @@ if is_weekday:
 else:
     print("Weekend plan")
 ```
+{% endcapture %}
+
+{% include runners/code.html
+   runner_id="python-nested-conditionals-py-0"
+   language="python"
+   challenge=challenge0
+   code=code0
+   source=source0
+%}
 
 Do these three things:
 1. Write the message that will print.
@@ -127,7 +156,26 @@ Do these three things:
 
 The program should check `has_permission` only when the user is logged in, but the inner decision is not indented correctly.
 
+{% capture challenge1 %}
+Popcorn Hack 2 - Fix the indentation and test all three login outcomes
+{% endcapture %}
+
+{% capture code1 %}
+logged_in = True
+has_permission = False
+
+if logged_in:
+    print("Account found")
+if has_permission:
+    print("Page opened")
+else:
+    print("Permission needed")
+{% endcapture %}
+
+{% capture source1 %}
 ```python
+# CODE_RUNNER: Popcorn Hack 2 - Fix the indentation and test all three login outcomes
+
 logged_in = True
 has_permission = False
 
@@ -138,6 +186,15 @@ if has_permission:
 else:
     print("Permission needed")
 ```
+{% endcapture %}
+
+{% include runners/code.html
+   runner_id="python-nested-conditionals-py-1"
+   language="python"
+   challenge=challenge1
+   code=code1
+   source=source1
+%}
 
 Do these four things:
 1. Explain why the current code is not nested.
@@ -149,7 +206,30 @@ Do these four things:
 
 Start with this Python nested conditional:
 
+{% capture challenge2 %}
+Popcorn Hack 3 - Run the nested decision, then translate its structure
+{% endcapture %}
+
+{% capture code2 %}
+club_member = True
+meeting_today = False
+
+if club_member:
+    if meeting_today:
+        print("Go to the meeting")
+    else:
+        print("Check the next meeting date")
+else:
+    print("Join the club first")
+{% endcapture %}
+
+{% capture source2 %}
 ```python
+# CODE_RUNNER: Popcorn Hack 3 - Run the nested decision, then translate its structure
+
+club_member = True
+meeting_today = False
+
 if club_member:
     if meeting_today:
         print("Go to the meeting")
@@ -158,6 +238,15 @@ if club_member:
 else:
     print("Join the club first")
 ```
+{% endcapture %}
+
+{% include runners/code.html
+   runner_id="python-nested-conditionals-py-2"
+   language="python"
+   challenge=challenge2
+   code=code2
+   source=source2
+%}
 
 Write the same structure in JavaScript and College Board pseudocode. Then explain which condition is checked first and when `meeting_today` is skipped.
 
@@ -172,12 +261,49 @@ Your program must:
 4. test one input for every outcome,
 5. include 2–3 sentences explaining why the second check is nested.
 
-```python
+{% capture challenge3 %}
+Homework Hack - Complete and test the two-level school event checker
+{% endcapture %}
+
+{% capture code3 %}
 registered = True
 has_pass = False
 
-# Replace this comment with your nested conditional.
+# Change the values above to test all three outcomes.
+if registered:
+    if has_pass:
+        print("Entry approved")
+    else:
+        print("Registered, but a pass is required")
+else:
+    print("Complete registration first")
+{% endcapture %}
+
+{% capture source3 %}
+```python
+# CODE_RUNNER: Homework Hack - Complete and test the two-level school event checker
+
+registered = True
+has_pass = False
+
+# Change the values above to test all three outcomes.
+if registered:
+    if has_pass:
+        print("Entry approved")
+    else:
+        print("Registered, but a pass is required")
+else:
+    print("Complete registration first")
 ```
+{% endcapture %}
+
+{% include runners/code.html
+   runner_id="python-nested-conditionals-py-3"
+   language="python"
+   challenge=challenge3
+   code=code3
+   source=source3
+%}
 
 ---
 
